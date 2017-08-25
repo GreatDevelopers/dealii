@@ -17,7 +17,7 @@
 #include "step-1.h"
 
 unsigned int No_of_divisionC = 0; // Divisions along Circumference; 0
-  // mean code will try to keep aspect ration of elements to minimum.
+  // mean code will try to keep aspect ratio of elements to minimum.
   
 unsigned int No_of_divisionR = 2; // Divisions along Radial
 //unsigned int No_of_divisionR = No_of_divisionC;
@@ -53,7 +53,8 @@ void step1_grid ()
              const double distance_from_center
               = center.distance (cell->vertex(v));
 
-            if (std::fabs(distance_from_center - inner_radius) < 1e-10)
+            if (std::fabs(distance_from_center - inner_radius) 
+               < TOLRANCE)
               {
                 cell->set_refine_flag ();
                 break;
