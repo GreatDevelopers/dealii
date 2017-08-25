@@ -28,6 +28,7 @@ void step1_grid ()
   const double inner_radius = 0.5,
                outer_radius = 1.0;
 
+  // Lines rearranged
   const HyperShellBoundary<2> boundary_description(center);
 
   Triangulation<2> divideIt;
